@@ -226,3 +226,18 @@
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: auto;
 }
+.sub-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.sub-button:hover {
+  background-color: #3e8e41;
+}

@@ -17,7 +17,10 @@
   </div>
   <div class="header-container__middle">
     <h3 routerLink="/">Eccom</h3>
+
   </div>
+  <button class="sub-button" (click)="subClick()">Subscribe</button>
+  <button class="sub-button" (click)="showSubClick()">Show Subscribers</button>
   <div class="header-container__right">
     <ng-container>
       <div class="cart-counter">{{ cartData.products.length }}</div>

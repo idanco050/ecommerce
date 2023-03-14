@@ -35,6 +35,10 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { SubscribePageComponent } from './subscribe-page/subscribe-page.component';
+import {SubscribeService} from "./services/subscribe.service";
+import { CardComponent } from './lightbox/lightbox.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 registerLocaleData(en);
 
@@ -52,6 +56,9 @@ registerLocaleData(en);
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,
+    SubscribePageComponent,
+    CardComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +84,7 @@ registerLocaleData(en);
     authInterceptorProviders,
     AuthGuardService,
     { provide: NZ_I18N, useValue: en_US },
+    SubscribeService,
   ],
   bootstrap: [AppComponent],
 })

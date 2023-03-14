@@ -4,28 +4,29 @@ const db = require("../database/db");
 
 // GET ALL PRODUCTS
 router.get("/", async (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
-
-  let startValue;
-  let endValue;
-
-  if (page > 0) {
-    startValue = page * limit - limit; // 0,10,20,30
-    endValue = page * limit;
-  } else {
-    startValue = 0;
-    endValue = 10;
-  }
-
-  db.query(
-    `SELECT p.id, p.title, p.image, p.price, p.short_desc, p.quantity,
-        c.title as category FROM products p JOIN categories c ON
-            c.id = p.cat_id LIMIT ${startValue}, ${limit}`,
-    (err, results) => {
-      if (err) console.log(err);
-      else res.json(results);
-    }
-  );
+  // const { page = 1, limit = 10 } = req.query;
+  //
+  // let startValue;
+  // let endValue;
+  //
+  // if (page > 0) {
+  //   startValue = page * limit - limit; // 0,10,20,30
+  //   endValue = page * limit;
+  // } else {
+  //   startValue = 0;
+  //   endValue = 10;
+  // }
+  //
+  // db.query(
+  //   `SELECT p.id, p.title, p.image, p.price, p.short_desc, p.quantity,
+  //       c.title as category FROM products p JOIN categories c ON
+  //           c.id = p.cat_id LIMIT ${startValue}, ${limit}`,
+  //   (err, results) => {
+  //     if (err) console.log(err);
+  //     else res.json(results);
+  //   }
+  // );
+  res.json([{id:123,title:"first",image:"https://wallpaperaccess.com/full/526285.jpg",price:60,short_desc:30,quantity:30}])
 });
 
 // GET SINGLE PRODUCT BY ID

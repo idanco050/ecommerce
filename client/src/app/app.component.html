@@ -1,2 +1,9 @@
+
+<app-card title="Heya! This site uses cookies"
+          subTitle="A cookie is a piece of data from a website that is stored within a web browser that the website can retrieve at a later time.">
+  <p>This is some example card content.</p>
+</app-card>
 <app-header></app-header>
+<app-subscribe-page *ngIf="getSubState()" class="popup"></app-subscribe-page>
+<app-dashboard *ngIf="getShowSubState()" class="popup"></app-dashboard>
 <router-outlet></router-outlet>
